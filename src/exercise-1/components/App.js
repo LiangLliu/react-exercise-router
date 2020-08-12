@@ -6,6 +6,7 @@ import Home from './Home';
 import MyProfile from './MyProfile';
 import AboutUs from './AboutUs';
 import Products from "./Products";
+import Product from "./Product";
 
 class App extends Component {
   render() {
@@ -24,6 +25,7 @@ class App extends Component {
             <Route exact path='/my-profile' component={MyProfile}/>
             <Route exact path='/about-us' component={AboutUs}/>
             <Route exact path="/products" component={Products} />
+            <Route exact path='/products/:id' component={Product}/>
           </Switch>
 
         </Router>
