@@ -1,0 +1,18 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    background-color: #CCCCCC;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.header-link{
+    padding-left: 30px;
+    padding-right: 30px;
+    text-decoration: none;
+}
+
+.select{
+    text-decoration: underline;
+}
