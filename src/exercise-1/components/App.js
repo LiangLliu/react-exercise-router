@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Link, NavLink, Route, Switch} from 'react-route
 import Home from './Home';
 import MyProfile from './MyProfile';
 import AboutUs from './AboutUs';
+import Products from "./Products";
 
 class App extends Component {
   render() {
@@ -13,15 +14,16 @@ class App extends Component {
         <Router>
           <div className="header">
             <NavLink className="header-link" activeClassName="select" to="/">Home</NavLink>
+            <NavLink className="header-link" activeClassName="select" to="/products">Products</NavLink>
             <NavLink className="header-link" activeClassName="select" to="/my-profile">My Profile</NavLink>
             <NavLink className="header-link" activeClassName="select" to="/about-us">About Us</NavLink>
           </div>
 
           <Switch>
+            <Route exact path='/' component={Home}/>
             <Route exact path='/my-profile' component={MyProfile}/>
             <Route exact path='/about-us' component={AboutUs}/>
-            <Route exact path='/' component={Home}/>
-            <Route path='*' component={Home}/>
+            <Route exact path="/products" component={Products} />
           </Switch>
 
         </Router>
