@@ -7,15 +7,15 @@ class Product extends Component {
   constructor(props) {
     super(props);
     const id = this.props.match.params.id;
-    let product = Object.values(products).filter(product => product.id == id);
 
     this.state = {
-      product,
+      product:
+        Object.values(products).find(product => product.id === Number.parseInt(id))
     }
   }
 
   render() {
-   const data = this.state.product[0];
+   const data = this.state.product;
     return (
       <div className="product">
         <p><strong>Product Details: </strong></p>

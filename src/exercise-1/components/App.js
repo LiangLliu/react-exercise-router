@@ -14,7 +14,7 @@ class App extends Component {
       <div className="app">
         <Router>
           <div className="header">
-            <NavLink className="header-link" activeClassName="select" to="/">Home</NavLink>
+            <NavLink exact className="header-link" activeClassName="select" to="/">Home</NavLink>
             <NavLink className="header-link" activeClassName="select" to="/products">Products</NavLink>
             <NavLink className="header-link" activeClassName="select" to="/my-profile">My Profile</NavLink>
             <NavLink className="header-link" activeClassName="select" to="/about-us">About Us</NavLink>
@@ -24,8 +24,7 @@ class App extends Component {
             <Route exact path='/' component={Home}/>
             <Route exact path='/my-profile' component={MyProfile}/>
             <Route exact path='/about-us' component={AboutUs}/>
-            <Route exact path={"/products"} component={Products} />
-            <Route exact path={"/goods"} component={Products} />
+            <Route exact path={["/products", "/goods"]} component={Products} />
             <Route exact path='/products/:id' component={Product}/>
             <Route path='*' component={Home}/>
           </Switch>
